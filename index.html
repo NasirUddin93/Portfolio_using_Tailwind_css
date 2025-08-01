@@ -8,39 +8,105 @@
 </head>
 <body class="bg-white text-gray-800 font-sans">
 
-  <!-- ✅ Navbar -->
+  <!-- Navbar -->
   <header class="bg-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-blue-600">BrandName</h1>
-      <nav class="space-x-6 text-gray-700 font-medium hidden md:flex">
-        <a href="#" class="hover:text-blue-600">Home</a>
-        <a href="#" class="hover:text-blue-600">Features</a>
-        <a href="#" class="hover:text-blue-600">Pricing</a>
-        <a href="#" class="hover:text-blue-600">Contact</a>
+      <h1 class="text-2xl font-bold">Nasir Uddin</h1>
+      <nav class="h-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="space-x-4 hidden md:block">
+            <a href="#about" class="px-6 py-2 hover:bg-blue-100">About</a>
+            <a href="#projects" class="px-6 py-2 hover:bg-blue-100">Projects</a>
+            <a href="#contact" class="px-6 py-2 hover:bg-blue-100">Contact</a>
+  
+          </div>
+          <!-- Mobile menu button -->
+          <div class="flex justify-end md:hidden">
+            <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+          <br>
+          <!--Mobile menu-->
+          <div id="mobile-menu" class="hidden px-4 pb-4">           
+            <a href="#about" class="block px-6 py-2 hover:bg-blue-100">About</a>
+            <a href="#projects" class="block px-6 py-2 hover:bg-blue-100">Projects</a>
+            <a href="#contact" class="block px-6 py-2 hover:bg-blue-100">Contact</a>
+          </div>
+
+        </div>
       </nav>
-      <button class="md:hidden p-2 rounded hover:bg-gray-100">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+
     </div>
   </header>
 
-  <!-- ✅ Hero Section -->
-  <section class="bg-gray-100 py-20">
-    <div class="max-w-4xl mx-auto text-center px-4">
-      <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
-        Welcome to Our Landing Page
-      </h2>
-      <p class="text-lg md:text-xl text-gray-600 mb-8">
-        Build beautiful, responsive websites with Tailwind CSS — fast and efficiently.
-      </p>
-      <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow">
-        Get Started
-      </a>
+  <!-- Hero Section -->
+  <section class="text-center py-20 bg-blue-50">
+    <h2 class="text-4xl font-bold mb-4">Hello, I'm Nasir</h2>
+    <p class="text-xl text-gray-700">Lecturer | Software Developer | Data Science Enthusiast</p>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-4xl mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold mb-6">About Me</h2>
+    <p class="text-lg leading-relaxed">
+      I'm a CSE Lecturer with a passion for software development and data science. I love building web applications using Laravel, Python, and modern tools.
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="bg-gray-50 py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-10 text-center">Projects</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 shadow rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
+          <p class="text-gray-600">Responsive personal portfolio using HTML, Tailwind CSS, and JS.</p>
+        </div>
+        <div class="bg-white p-6 shadow rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Laravel Blog</h3>
+          <p class="text-gray-600">A full-featured blog with authentication and admin panel.</p>
+        </div>
+        <div class="bg-white p-6 shadow rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">AI Agent Controller</h3>
+          <p class="text-gray-600">A fuzzy logic controller agent for smart decision making.</p>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-4xl mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+    <p class="mb-4 text-lg">Feel free to reach out via email or LinkedIn:</p>
+    <ul class="text-lg space-y-2">
+      <li><strong>Email:</strong> nasir93cse@gmail.com</li>
+      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nasir-uddin-209111121/" class="text-blue-600 underline">nasir-uddin</a></li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-white mt-10">
+    <p class="text-gray-600">&copy; 2025 Nasir Uddin. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+<script>
+  const togglebtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  togglebtn.addEventListener('click',()=>{
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
 
 </body>
 </html>
